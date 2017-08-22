@@ -13,6 +13,10 @@
 	margin: .1rem;
 }
 
+.btn {
+	padding: .5rem 0rem;
+}
+
 .btn:active {
 	border: none !important;
 }
