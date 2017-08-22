@@ -3,6 +3,10 @@
 	padding-right: .1rem;
 }
 
+.card {
+	margin-bottom: .1rem;
+}
+
 .card-header {
 	color: #555;
 	padding: 0rem .5rem;
@@ -11,6 +15,15 @@
 
 .col {
 	margin: .1rem;
+}
+
+.col-5>.btn-group {
+	padding: .1rem;
+}
+
+.ttl {
+	font-size: .8rem;
+	padding-left: .5rem !important;
 }
 
 .btn {
@@ -26,27 +39,33 @@
 }
 
 .dropdown-toggle {
-	width:20%;
+	width: 20%;
 }
 
-.btn-back {
+.btn-cmd {
 	border-width: .2rem;
+	font-weight: 500;
+	background-color: white;
+}
+
+.btn-cmd-back {
 	border-color: #ff9900;
 	color: #ff9900;
-	font-weight: bold;
-	background-color: white;
 }
 
-.btn-new {
-	border-width: .2rem;
+.btn-cmd-new {
 	border-color: #32cd32;
 	color: #32cd32;
-	font-weight: bold;
-	background-color: white;
+	color: #32cd32;
 }
 
 .btn-conso-beer {
 	background-color: #ffe066;
+}
+
+.ttl-conso-beer {
+	border-color: #cca300;
+	color: #cca300;
 }
 
 .drp-conso-beer {
@@ -61,6 +80,11 @@
 	background-color: #ccff99;
 }
 
+.ttl-conso-vin {
+	border-color: #4d9900;
+	color: #4d9900;
+}
+
 .btn-conso-soft {
 	background-color: #ff99bb;
 }
@@ -69,12 +93,26 @@
 	background-color: #ffccdd;
 }
 
+.ttl-conso-soft {
+	color: #990033;
+	border-color: #990033;
+}
+
+.btn-group-conso-eau {
+	margin-bottom: .1rem;
+}
+
 .btn-conso-eau {
 	background-color: #66b3ff
 }
 
 .drp-conso-eau {
 	background-color: #99ccff;
+}
+
+.ttl-consigne {
+	border-color: #ff5c33;
+	color: #ff5c33;
 }
 
 .btn-consigne {
