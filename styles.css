@@ -17,6 +17,10 @@
 	border: none !important;
 }
 
+.dropdown-toggle:active {
+	border: none !important;
+}
+
 .btn-back {
 	border-width: .2rem;
 	border-color: #ff9900;

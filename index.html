@@ -5,6 +5,17 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Goûtez Electronique - Bar</title>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+	integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+	integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+	crossorigin="anonymous"></script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
 	integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
@@ -111,6 +122,38 @@
 		</div>
 		<button type="button" class="btn btn-conso-eau btn-block">Bouteille
 			d'eau</button>
+		<div class="btn-group btn-block">
+			<button type="button" class="btn btn-conso-eau btn-block">Bouteille
+				d'eau</button>
+			<button type="button"
+				class="btn btn-conso-eau dropdown-toggle dropdown-toggle-split"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="sr-only">Toggle Dropdown</span>
+			</button>
+			<div class="dropdown-menu btn-block" x-placement="bottom-start"
+				style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+				<a class="dropdown-item" href="#">0</a> <a class="dropdown-item"
+					href="#">1</a> <a class="dropdown-item" href="#">2</a> <a
+					class="dropdown-item" href="#">3</a> <a class="dropdown-item"
+					href="#">4</a> <a class="dropdown-item" href="#">5</a><a
+					class="dropdown-item" href="#">6</a>
+			</div>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn btn-danger">Action</button>
+			<button type="button"
+				class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="sr-only">Toggle Dropdown</span>
+			</button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">Action</a> <a
+					class="dropdown-item" href="#">Another action</a> <a
+					class="dropdown-item" href="#">Something else here</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Separated link</a>
+			</div>
+		</div>
 		<div class="card">
 			<div class="row no-gutters">
 				<div class="col">
