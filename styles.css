@@ -45,12 +45,24 @@
 	background-color: #ffe066;
 }
 
+.drp-conso-beer {
+	background-color: #ffeb99;
+}
+
 .btn-conso-vin {
 	background-color: #b3ff66;
 }
 
+.drp-conso-vin {
+	background-color: #ccff99;
+}
+
 .btn-conso-soft {
 	background-color: #ff99bb;
+}
+
+.drp-conso-soft {
+	background-color: #ffccdd;
 }
 
 .btn-conso-eau {
@@ -63,6 +75,10 @@
 
 .btn-consigne {
 	background-color: #ff5c33;
+}
+
+.drp-consigne {
+	background-color: #ff8566;
 }
 
 .btn-client {
