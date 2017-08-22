@@ -4,6 +4,7 @@
 }
 
 .btn-back:active, .btn-back:focus {
+	-webkit-tap-highlight-color: #665700;
 	background-color: #665700;
 }
 
@@ -12,7 +13,8 @@
 }
 
 .btn-new:active, .btn-new:focus {
-  background-color: #145214;
+	-webkit-tap-highlight-color: #145214;
+	background-color: #145214;
 }
 
 .btn-conso {
@@ -20,6 +22,7 @@
 }
 
 .btn-conso:active {
+	-webkit-tap-highlight-color: #003366;
 	background-color: #003366;
 }
 
