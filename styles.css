@@ -1,19 +1,21 @@
+.btn:active {
+	transform: translateY(4px);
+	/*border: none !important;*/
+}
 
 .btn-back {
 	background-color: #ffd700;
 }
 
 .btn-back:active, .btn-back:focus {
-	-webkit-tap-highlight-color: #665700;
 	background-color: #665700;
 }
 
 .btn-new {
-   background-color: #32cd32;
+	background-color: #32cd32;
 }
 
 .btn-new:active, .btn-new:focus {
-	-webkit-tap-highlight-color: #145214;
 	background-color: #145214;
 }
 
@@ -22,7 +24,6 @@
 }
 
 .btn-conso:active {
-	-webkit-tap-highlight-color: #003366;
 	background-color: #003366;
 }
 
@@ -40,8 +41,4 @@
 
 .btn-client:active {
 	background-color: #661d00;
-}
-
-.btn:active {
-  border:none !important;
 }
