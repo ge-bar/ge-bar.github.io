@@ -3,7 +3,7 @@
 	background-color: #ffd700;
 }
 
-.btn-back:active {
+.btn-back:active, .btn-back:focus {
 	background-color: #665700;
 }
 
@@ -11,16 +11,16 @@
    background-color: #32cd32;
 }
 
-.btn-new:active {
+.btn-new:active, .btn-new:focus {
   background-color: #145214;
 }
 
 .btn-conso {
-	background-color: #00bfff;
+	background-color: #1e90ff;
 }
 
 .btn-conso:active {
-	background-color: #004d66;
+	background-color: #003366;
 }
 
 .btn-consigne {
