@@ -1,13 +1,12 @@
-.btn:active {
-	transform: translate(-8px,8px);
-	/*border: none !important;*/
-}
+/*.btn:active {
+	transform: translateY(2px);
+}*/
 
 .btn-back {
 	background-color: #ffd700;
 }
 
-.btn-back:active, .btn-back:focus {
+.btn-back:active {
 	background-color: #665700;
 }
 
@@ -15,7 +14,7 @@
 	background-color: #32cd32;
 }
 
-.btn-new:active, .btn-new:focus {
+.btn-new:active {
 	background-color: #145214;
 }
 
