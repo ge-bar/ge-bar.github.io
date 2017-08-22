@@ -1,43 +1,58 @@
+.container-fluid {
+	padding-left: .1rem;
+	padding-right: .1rem;
+}
+
+.card-header {
+	color: #555;
+	padding: 0rem .5rem;
+	font-size: .8rem;
+}
+
+.col {
+	margin: .1rem;
+}
+
 .btn:active {
 	border: none !important;
 }
 
 .btn-back {
-	background-color: #ffd700;
-}
-
-.btn-back:active {
-	background-color: #665700;
+	border-width: .2rem;
+	border-color: #ff9900;
+	color: #ff9900;
+	font-weight: bold;
+	background-color: white;
 }
 
 .btn-new {
-	background-color: #32cd32;
+	border-width: .2rem;
+	border-color: #32cd32;
+	color: #32cd32;
+	font-weight: bold;
+	background-color: white;
 }
 
-.btn-new:active {
-	background-color: #145214;
+.btn-conso-beer {
+	background-color: #ffe066;
 }
 
-.btn-conso {
-	background-color: #1e90ff;
+.btn-conso-vin {
+	background-color: #b3ff66;
 }
 
-.btn-conso:active {
-	background-color: #003366;
+.btn-conso-soft {
+	background-color: #ff99bb;
+}
+
+.btn-conso-eau {
+	background-color: #66b3ff
 }
 
 .btn-consigne {
-	background-color: #ff3300;
-}
-
-.btn-consigne:active {
-	background-color: #661400;
+	background-color: #ff5c33;
 }
 
 .btn-client {
-	background-color: #ffa07a;
-}
-
-.btn-client:active {
-	background-color: #661d00;
+	background-color: #ffb366;
 }
