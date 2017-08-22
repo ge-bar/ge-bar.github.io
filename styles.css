@@ -1,0 +1,20 @@
+
+.btn-back {
+	background-color: orange;
+}
+
+.btn-back:active {
+  background-color: #cb8400;
+}
+
+.btn-new {
+	background-color: #00b300;
+}
+
+.btn-new:active {
+  background-color: green;
+}
+
+.btn:active {
+  border:none !important;
+}
