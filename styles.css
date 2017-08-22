@@ -21,6 +21,10 @@
 	border: none !important;
 }
 
+.dropdown-toggle {
+	width:20%;
+}
+
 .btn-back {
 	border-width: .2rem;
 	border-color: #ff9900;
@@ -51,6 +55,10 @@
 
 .btn-conso-eau {
 	background-color: #66b3ff
+}
+
+.drp-conso-eau {
+	background-color: #99ccff;
 }
 
 .btn-consigne {
