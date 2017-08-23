@@ -42,10 +42,15 @@
 	width: 20%;
 }
 
+.input-group > span, .input-group > input {
+	padding: 0rem .5rem;
+}
+
 .btn-cmd {
 	border-width: .2rem;
 	font-weight: 500;
 	background-color: white;
+	/*padding: .25rem;*/
 }
 
 .btn-cmd-back {
