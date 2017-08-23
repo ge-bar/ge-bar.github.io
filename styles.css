@@ -104,10 +104,11 @@
 }
 
 .btn-group-conso-eau {
-	margin-bottom: .1rem;
+	padding: .05rem .05rem 0rem .1rem;
 }
 
 .btn-conso-eau {
+	padding: 1.25rem 0rem;
 	background-color: #66b3ff
 }
 
