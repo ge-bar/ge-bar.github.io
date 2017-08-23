@@ -1,30 +1,22 @@
 $(function() {
 	if (isIos() && isRunningStandalone()) {
-		// Initialize Fast Click
-		// Even with the latest webkit updates, unfortunatley iOS standalone
-		// apps
-		// still have the 350ms click delay,
-		// so we need to bring in fastclick to alleviate this.
-		// See
-		// https://stackoverflow.com/questions/39951945/ios-standalone-app-300ms-click-delay
-		if ('addEventListener' in document) {
-			alert('addEventListener');
-			document.addEventListener('DOMContentLoaded', function() {
-				FastClick.attach(document.body);
-			}, false);
-		}
+		/*
+		 * Initialize Fast Click. Even with the latest webkit updates,
+		 * unfortunatley iOS standalone apps still have the 350ms click delay,
+		 * so we need to bring in fastclick to alleviate this. See
+		 * https://stackoverflow.com/questions/39951945/ios-standalone-app-300ms-click-delay
+		 */
+		FastClick.attach(document.body);
 	}
 });
 
 isIos = function() {
-	alert('isIos');
 	// Reference:
 	// https://stackoverflow.com/questions/9038625/detect-if-device-is-ios#answer-9039885
 	return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 };
 
 isRunningStandalone = function() {
-	alert('Standalone');
 	// Bullet proof way to check if iOS standalone
 	var isRunningiOSStandalone = window.navigator.standalone;
 
