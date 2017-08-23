@@ -8,6 +8,7 @@ $(function() {
 		// See
 		// https://stackoverflow.com/questions/39951945/ios-standalone-app-300ms-click-delay
 		if ('addEventListener' in document) {
+			alert('addEventListener');
 			document.addEventListener('DOMContentLoaded', function() {
 				FastClick.attach(document.body);
 			}, false);
@@ -16,12 +17,14 @@ $(function() {
 });
 
 isIos = function() {
+	alert('isIos');
 	// Reference:
 	// https://stackoverflow.com/questions/9038625/detect-if-device-is-ios#answer-9039885
 	return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 };
 
 isRunningStandalone = function() {
+	alert('Standalone');
 	// Bullet proof way to check if iOS standalone
 	var isRunningiOSStandalone = window.navigator.standalone;
 
