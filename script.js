@@ -163,7 +163,10 @@ barModel = {
 	},
 	calculRendu : function() {
 		if (this.monnaieDonnee > 0 && this.montant > 0) {			
-			this.monnaieRendu = this.monnaieDonnee - this.montant;
+			var solde = this.monnaieDonnee - this.montant;
+			if (solde > 0) {
+				this.monnaieRendu = solde;
+			}
 		}
 	}
 };
