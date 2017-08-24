@@ -17,7 +17,11 @@
 	margin: .1rem;
 }
 
-.col-5>.btn-group {
+.col-2 > div, .col-4 > div {
+	margin: .1rem;
+}
+
+.col-5 > .btn-group {
 	padding: .1rem;
 }
 
@@ -105,6 +109,7 @@
 }
 
 .btn-group-conso-eau {
+	margin: 0rem !important;
 	padding: 0rem .05rem 0rem .1rem;
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="bar" lang="fr">
+<html data-ng-app="geBar" lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport"
@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid" data-ng-controller="geBarController">
 
 		<div class="row no-gutters">
 			<div class="col-sm-7">
@@ -47,8 +47,9 @@
 					<div class="row no-gutters">
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block">
-									Demi <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-beer btn-block"
+									data-ng-click="add('kroDemi')">
+									Demi <span class="badge badge-secondary">{{bar.conso.kroDemi.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -58,18 +59,16 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block">
-									Pinte <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-beer btn-block"
+									data-ng-click="add('kroPinte')">
+									Pinte <span class="badge badge-secondary">{{bar.conso.kroPinte.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -79,18 +78,16 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block">
-									Pichet <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-beer btn-block"
+									data-ng-click="add('kroPichet')">
+									Pichet <span class="badge badge-secondary">{{bar.conso.kroPichet.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -100,11 +97,8 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
@@ -117,8 +111,9 @@
 					<div class="row no-gutters">
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block">
-									Demi <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-beer btn-block"
+									data-ng-click="add('grimDemi')">
+									Demi <span class="badge badge-secondary">{{bar.conso.grimDemi.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -128,18 +123,16 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block">
-									Pinte <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-beer btn-block"
+									data-ng-click="add('grimPinte')">
+									Pinte <span class="badge badge-secondary">{{bar.conso.grimPinte.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -149,18 +142,16 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block">
-									Pichet <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-beer btn-block"
+									data-ng-click="add('grimPichet')">
+									Pichet <span class="badge badge-secondary">{{bar.conso.grimPichet.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -170,11 +161,8 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
@@ -187,8 +175,9 @@
 					<div class="row no-gutters">
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block">
-									Demi <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-beer btn-block"
+									data-ng-click="add('kroSiropDemi')">
+									Demi <span class="badge badge-secondary">{{bar.conso.kroSiropDemi.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -198,18 +187,16 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block">
-									Pinte <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-beer btn-block"
+									data-ng-click="add('kroSiropPinte')">
+									Pinte <span class="badge badge-secondary">{{bar.conso.kroSiropPinte.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -219,18 +206,16 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block">
-									Pichet <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-beer btn-block"
+									data-ng-click="add('kroSiropPichet')">
+									Pichet <span class="badge badge-secondary">{{bar.conso.kroSiropPichet.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -240,11 +225,8 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
@@ -257,8 +239,9 @@
 					<div class="row no-gutters">
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block">
-									Demi <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-beer btn-block"
+									data-ng-click="add('kroMateDemi')">
+									Demi <span class="badge badge-secondary">{{bar.conso.kroMateDemi.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -268,18 +251,16 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block">
-									Pinte <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-beer btn-block"
+									data-ng-click="add('kroMatePinte')">
+									Pinte <span class="badge badge-secondary">{{bar.conso.kroMatePinte.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -289,11 +270,8 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
@@ -306,8 +284,9 @@
 					<div class="row no-gutters">
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-vin btn-block">
-									12cl <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-vin btn-block"
+									data-ng-click="add('vin12')">
+									12cl <span class="badge badge-secondary">{{bar.conso.vin12.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
@@ -317,18 +296,16 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-vin btn-block">
-									24cl <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-vin btn-block"
+									data-ng-click="add('vin24')">
+									24cl <span class="badge badge-secondary">{{bar.conso.vin24.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
@@ -338,18 +315,16 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-vin btn-block">
-									48cl <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-vin btn-block"
+									data-ng-click="add('vin48')">
+									48cl <span class="badge badge-secondary">{{bar.conso.vin48.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
@@ -359,18 +334,16 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
 						<div class="col">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-vin btn-block">
-									Pichet <span class="badge badge-secondary">0</span>
+								<button type="button" class="btn btn-conso-vin btn-block"
+									data-ng-click="add('vinPichet')">
+									Pichet <span class="badge badge-secondary">{{bar.conso.vinPichet.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
@@ -380,11 +353,8 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
@@ -399,8 +369,9 @@
 							<div class="row no-gutters">
 								<div class="col">
 									<div class="btn-group btn-block">
-										<button type="button" class="btn btn-conso-soft btn-block">
-											Demi <span class="badge badge-secondary">0</span>
+										<button type="button" class="btn btn-conso-soft btn-block"
+											data-ng-click="add('softDemi')">
+											Demi <span class="badge badge-secondary">{{bar.conso.softDemi.nb}}</span>
 										</button>
 										<button type="button"
 											class="btn drp-conso-soft dropdown-toggle dropdown-toggle-split"
@@ -410,20 +381,16 @@
 										</button>
 										<div class="dropdown-menu" x-placement="bottom-start"
 											style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-											<a class="dropdown-item" href="#">0</a> <a
-												class="dropdown-item" href="#">1</a> <a
-												class="dropdown-item" href="#">2</a> <a
-												class="dropdown-item" href="#">3</a> <a
-												class="dropdown-item" href="#">4</a> <a
-												class="dropdown-item" href="#">5</a><a class="dropdown-item"
-												href="#">6</a>
+											<a class="dropdown-item" href=""
+												data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 										</div>
 									</div>
 								</div>
 								<div class="col">
 									<div class="btn-group btn-block">
-										<button type="button" class="btn btn-conso-soft btn-block">
-											Pinte <span class="badge badge-secondary">0</span>
+										<button type="button" class="btn btn-conso-soft btn-block"
+											data-ng-click="add('softPinte')">
+											Pinte <span class="badge badge-secondary">{{bar.conso.softPinte.nb}}</span>
 										</button>
 										<button type="button"
 											class="btn drp-conso-soft dropdown-toggle dropdown-toggle-split"
@@ -433,13 +400,8 @@
 										</button>
 										<div class="dropdown-menu" x-placement="bottom-start"
 											style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-											<a class="dropdown-item" href="#">0</a> <a
-												class="dropdown-item" href="#">1</a> <a
-												class="dropdown-item" href="#">2</a> <a
-												class="dropdown-item" href="#">3</a> <a
-												class="dropdown-item" href="#">4</a> <a
-												class="dropdown-item" href="#">5</a><a class="dropdown-item"
-												href="#">6</a>
+											<a class="dropdown-item" href=""
+												data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 										</div>
 									</div>
 								</div>
@@ -448,8 +410,9 @@
 					</div>
 					<div class="col-4">
 						<div class="btn-group btn-group-conso-eau btn-block">
-							<button type="button" class="btn btn-conso-eau btn-block">
-								Btl. d'eau <span class="badge badge-secondary">0</span>
+							<button type="button" class="btn btn-conso-eau btn-block"
+								data-ng-click="add('eau')">
+								Btl. d'eau <span class="badge badge-secondary">{{bar.conso.eau.nb}}</span>
 							</button>
 							<button type="button"
 								class="btn btn-conso-eau drp-conso-eau dropdown-toggle dropdown-toggle-split"
@@ -459,11 +422,8 @@
 							</button>
 							<div class="dropdown-menu" x-placement="bottom-start"
 								style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-								<a class="dropdown-item" href="#">0</a> <a class="dropdown-item"
-									href="#">1</a> <a class="dropdown-item" href="#">2</a> <a
-									class="dropdown-item" href="#">3</a> <a class="dropdown-item"
-									href="#">4</a> <a class="dropdown-item" href="#">5</a><a
-									class="dropdown-item" href="#">6</a>
+								<a class="dropdown-item" href=""
+									data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 							</div>
 						</div>
 					</div>
@@ -478,8 +438,9 @@
 						</div>
 						<div class="col-5">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-consigne btn-block">
-									Gobelet <span class="badge badge-secondary">0</span>
+								<button type="button" data-ng-click="add('consigneGobelet')"
+									class="btn btn-consigne btn-block">
+									Gobelet <span class="badge badge-secondary">{{bar.conso.consigneGobelet.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-consigne dropdown-toggle dropdown-toggle-split"
@@ -489,18 +450,16 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-5">
 							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-consigne btn-block">
-									Pichet <span class="badge badge-secondary">0</span>
+								<button type="button" data-ng-click="add('consignePichet')"
+									class="btn btn-consigne btn-block">
+									Pichet <span class="badge badge-secondary">{{bar.conso.consignePichet.nb}}</span>
 								</button>
 								<button type="button"
 									class="btn drp-consigne dropdown-toggle dropdown-toggle-split"
@@ -510,76 +469,99 @@
 								</button>
 								<div class="dropdown-menu" x-placement="bottom-start"
 									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">0</a> <a
-										class="dropdown-item" href="#">1</a> <a class="dropdown-item"
-										href="#">2</a> <a class="dropdown-item" href="#">3</a> <a
-										class="dropdown-item" href="#">4</a> <a class="dropdown-item"
-										href="#">5</a><a class="dropdown-item" href="#">6</a>
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions">{{option}}</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">Montant
-						commande</span> <input class="form-control form-control-lg" type="text"
-						placeholder="00.00" readonly>
+						commande</span> <input class="form-control form-control-lg"
+						data-ng-model="bar.montant" data-ng-init="bar.montant = 0"
+						type="text" readonly>
 				</div>
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">A rendre
-						au client</span> <input class="form-control form-control-lg" type="text"
-						placeholder="00.00" readonly>
+						au client</span> <input class="form-control form-control-lg"
+						data-ng-model="bar.monnaieRendu"
+						data-ng-init="bar.monnaieRendu = 0" type="text" readonly>
 				</div>
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">Monnaie
-						client</span> <input class="form-control form-control-lg" type="text"
-						placeholder="00.00" readonly>
+						client</span> <input class="form-control form-control-lg"
+						data-ng-model="bar.monnaieDonnee"
+						data-ng-init="bar.monnaieDonnee = 0" type="text" readonly>
 				</div>
 				<div>
 					<div class="row no-gutters">
 						<div class="col">
-							<button type="button" class="btn btn-client btn-block">7</button>
+							<button type="button" data-ng-click="numberButtonClicked(7)"
+								class="btn btn-client btn-block">7</button>
 						</div>
 						<div class="col">
-							<button type="button" class="btn btn-client btn-block">8</button>
+							<button type="button" data-ng-click="numberButtonClicked(8)"
+								class="btn btn-client btn-block">8</button>
 						</div>
 						<div class="col">
-							<button type="button" class="btn btn-client btn-block">9</button>
-						</div>
-					</div>
-					<div class="row no-gutters">
-						<div class="col">
-							<button type="button" class="btn btn-client btn-block">4</button>
-						</div>
-						<div class="col">
-							<button type="button" class="btn btn-client btn-block">5</button>
-						</div>
-						<div class="col">
-							<button type="button" class="btn btn-client btn-block">6</button>
+							<button type="button" data-ng-click="numberButtonClicked(9)"
+								class="btn btn-client btn-block">9</button>
 						</div>
 					</div>
 					<div class="row no-gutters">
 						<div class="col">
-							<button type="button" class="btn btn-client btn-block">1</button>
+							<button type="button" data-ng-click="numberButtonClicked(4)"
+								class="btn btn-client btn-block">4</button>
 						</div>
 						<div class="col">
-							<button type="button" class="btn btn-client btn-block">2</button>
+							<button type="button" data-ng-click="numberButtonClicked(5)"
+								class="btn btn-client btn-block">5</button>
 						</div>
 						<div class="col">
-							<button type="button" class="btn btn-client btn-block">3</button>
+							<button type="button" data-ng-click="numberButtonClicked(6)"
+								class="btn btn-client btn-block">6</button>
 						</div>
 					</div>
 					<div class="row no-gutters">
 						<div class="col">
-							<button type="button" class="btn btn-client btn-block">0</button>
+							<button type="button" data-ng-click="numberButtonClicked(1)"
+								class="btn btn-client btn-block">1</button>
 						</div>
 						<div class="col">
-							<button type="button" class="btn btn-client btn-block">.</button>
+							<button type="button" data-ng-click="numberButtonClicked(2)"
+								class="btn btn-client btn-block">2</button>
 						</div>
 						<div class="col">
-							<button type="button" class="btn btn-client btn-block">CE</button>
+							<button type="button" data-ng-click="numberButtonClicked(3)"
+								class="btn btn-client btn-block">3</button>
+						</div>
+					</div>
+					<div class="row no-gutters">
+						<div class="col-4">
+							<div>
+								<button type="button" data-ng-click="numberButtonClicked(0)"
+									class="btn btn-client btn-block">0</button>
+							</div>
+						</div>
+						<div class="col-4">
+							<div>
+								<button type="button" data-ng-click="numberButtonClicked('.')"
+									class="btn btn-client btn-block">.</button>
+							</div>
+						</div>
+						<div class="col-2">
+							<div>
+								<button type="button" class="btn btn-client btn-block"
+									data-ng-click="clear()">CE</button>
+							</div>
+						</div>
+						<div class="col-2">
+							<div>
+								<button type="button" class="btn btn-client btn-block"
+									data-ng-click="clearAll()">C</button>
+							</div>
 						</div>
 					</div>
 				</div>
