@@ -23,6 +23,7 @@
 
 .ttl {
 	font-size: .8rem;
+	margin-bottom: -.2rem;
 	padding-left: .5rem !important;
 }
 
@@ -104,11 +105,11 @@
 }
 
 .btn-group-conso-eau {
-	padding: .05rem .05rem 0rem .1rem;
+	padding: 0rem .05rem 0rem .1rem;
 }
 
 .btn-conso-eau {
-	padding: 1.25rem 0rem;
+	padding: 1.15rem 0rem;
 	background-color: #66b3ff
 }
 
