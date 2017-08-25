@@ -111,7 +111,7 @@ barModel = {
 			nb : 0
 		}
 	},
-	nbOptions : [0, 1, 2, 3, 4, 5, 6],
+	nbOptions : [ 0, 1, 2, 3, 4, 5, 6 ],
 	montant : 0,
 	monnaieRendu : 0,
 	monnaieDonnee : 0,
@@ -162,12 +162,22 @@ barModel = {
 		this.montant = somme;
 	},
 	calculRendu : function() {
-		if (this.monnaieDonnee > 0 && this.montant > 0) {			
+		if (this.monnaieDonnee > 0 && this.montant > 0) {
 			var solde = this.monnaieDonnee - this.montant;
 			if (solde > 0) {
 				this.monnaieRendu = solde;
+			} else {
+				this.monnaieRendu = 0;
 			}
 		}
+	},
+	reset : function() {
+		for ( var conso in this.conso) {
+			this.conso[conso].nb = 0;
+		}
+		this.montant = 0;
+		this.monnaieRendu = 0;
+		this.monnaieDonnee = 0;
 	}
 };
 
@@ -199,5 +209,11 @@ app.controller('geBarController', function($scope) {
 
 	$scope.set = function(conso, nb) {
 		barModel.setConso(conso, nb);
+		barModel.calculMontant();
+		barModel.calculRendu();
+	}
+	
+	$scope.newCmd = function() {
+		barModel.reset();
 	}
 });

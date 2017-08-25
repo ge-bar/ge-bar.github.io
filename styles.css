@@ -17,11 +17,11 @@
 	margin: .1rem;
 }
 
-.col-2 > div, .col-4 > div {
+.col-2>div, .col-4>div {
 	margin: .1rem;
 }
 
-.col-5 > .btn-group {
+.col-5>.btn-group {
 	padding: .1rem;
 }
 
@@ -47,7 +47,7 @@
 	width: 20%;
 }
 
-.input-group > span, .input-group > input {
+.input-group>span, .input-group>input {
 	padding: 0rem .5rem;
 }
 
@@ -64,8 +64,10 @@
 }
 
 .btn-cmd-new {
+	height: 6rem !important;
+	white-space: normal;
+	word-wrap: break-word;
 	border-color: #32cd32;
-	color: #32cd32;
 	color: #32cd32;
 }
 
