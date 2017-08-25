@@ -137,6 +137,22 @@
 	background-color: #ff8566;
 }
 
+.montant {
+	border:none;
+}
+
+.montant-client {
+	background-color: #84e184 !important;
+}
+
+.ttl-montant {
+	margin: .1em 0em 0em .1em;
+}
+
+.val-montant {
+	margin: .075em .1em 0em 0em;
+}
+
 .btn-client {
-	background-color: #ffb366;
+	background-color: #ffb366 !important;
 }
