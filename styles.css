@@ -1,9 +1,43 @@
+html, body {
+	height: 100%;
+}
+
 .container-fluid {
+	height: 100%;
 	padding-left: .1rem;
 	padding-right: .1rem;
 }
 
+.fullh {
+	height: 100%;
+}
+
+.btn-block {
+	height: 100%;
+}
+
+.blck-16 {
+	height: 16.666%;
+}
+
+.blck-20 {
+	height: 20%;
+}
+
+.blck-25 {
+	height: 25%;
+}
+
+.blck-33 {
+	height: 33.333%;
+}
+
+.blck-60 {
+	height: 60%;
+}
+
 .card {
+	height: 100%;
 	margin-bottom: .1rem;
 }
 
@@ -14,11 +48,9 @@
 }
 
 .col {
-	margin: .1rem;
-}
-
-.col-2>div, .col-4>div {
-	margin: .1rem;
+	height: 100%;
+	margin: 0 .1rem 0 .1rem;
+	padding: .1rem 0 .1rem 0;
 }
 
 .col-5>.btn-group {
@@ -27,12 +59,12 @@
 
 .ttl {
 	font-size: .8rem;
-	margin-bottom: -.2rem;
+	height: 20%;
 	padding-left: .5rem !important;
 }
 
-.btn {
-	padding: .5rem 0rem;
+.cntnt {
+	height: 80%
 }
 
 .btn:active {
@@ -64,7 +96,6 @@
 }
 
 .btn-cmd-new {
-	height: 6rem !important;
 	white-space: normal;
 	word-wrap: break-word;
 	border-color: #32cd32;
@@ -106,8 +137,8 @@
 }
 
 .ttl-conso-soft {
-	color: #990033;
 	border-color: #990033;
+	color: #990033;
 }
 
 .btn-group-conso-eau {
@@ -116,7 +147,6 @@
 }
 
 .btn-conso-eau {
-	padding: 1.15rem 0rem;
 	background-color: #66b3ff
 }
 
@@ -137,22 +167,36 @@
 	background-color: #ff8566;
 }
 
-.montant {
-	border:none;
+.montant-client {
+	background-color: #84e184;
 }
 
-.montant-client {
-	background-color: #84e184 !important;
+.box-montant {
+	display: table;
+	width: 100%;
+	border-radius: .25rem;
+	padding: .1rem;
 }
 
 .ttl-montant {
-	margin: .1em 0em 0em .1em;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: .5rem;
+	height: 100%;
+	border-radius: .25rem;
 }
 
-.val-montant {
-	margin: .075em .1em 0em 0em;
+.rendu-client {
+	background-color: #e6e6e6;
 }
 
 .btn-client {
 	background-color: #ffb366 !important;
+}
+
+.btn-client-clr {
+	border-width: .2rem;
+	background-color: white;
+	border-color: #ffb366;
+	color: #ffb366;
 }

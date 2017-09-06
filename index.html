@@ -32,499 +32,497 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
 	integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
 	crossorigin="anonymous">
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet"
+	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	crossorigin="anonymous">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<div class="container-fluid" data-ng-controller="geBarController">
-
-		<div class="row no-gutters">
-			<div class="col-sm-7">
-
-				<div class="card ttl-conso-beer">
-					<div class="row ttl no-gutters">
-						<span>Kronembourg ou Panaché</span>
-					</div>
-					<div class="row no-gutters">
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block"
-									data-ng-click="add('kroDemi')">
-									Demi <span class="badge badge-secondary">{{bar.conso.kroDemi.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('kroDemi', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block"
-									data-ng-click="add('kroPinte')">
-									Pinte <span class="badge badge-secondary">{{bar.conso.kroPinte.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('kroPinte', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block"
-									data-ng-click="add('kroPichet')">
-									Pichet <span class="badge badge-secondary">{{bar.conso.kroPichet.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('kroPichet', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="card ttl-conso-beer">
-					<div class="row ttl no-gutters">
-						<span>Grimbergen</span>
-					</div>
-					<div class="row no-gutters">
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block"
-									data-ng-click="add('grimDemi')">
-									Demi <span class="badge badge-secondary">{{bar.conso.grimDemi.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('grimDemi', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block"
-									data-ng-click="add('grimPinte')">
-									Pinte <span class="badge badge-secondary">{{bar.conso.grimPinte.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('grimPinte', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block"
-									data-ng-click="add('grimPichet')">
-									Pichet <span class="badge badge-secondary">{{bar.conso.grimPichet.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('grimPichet', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="card ttl-conso-beer">
-					<div class="row ttl no-gutters">
-						<span>Twist / Monaco / Pêche / Pelouse</span>
-					</div>
-					<div class="row no-gutters">
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block"
-									data-ng-click="add('kroSiropDemi')">
-									Demi <span class="badge badge-secondary">{{bar.conso.kroSiropDemi.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('kroSiropDemi', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block"
-									data-ng-click="add('kroSiropPinte')">
-									Pinte <span class="badge badge-secondary">{{bar.conso.kroSiropPinte.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('kroSiropPinte', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block"
-									data-ng-click="add('kroSiropPichet')">
-									Pichet <span class="badge badge-secondary">{{bar.conso.kroSiropPichet.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('kroSiropPichet', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="card ttl-conso-beer">
-					<div class="row ttl no-gutters">
-						<span>Club Maté ou Kromaté</span>
-					</div>
-					<div class="row no-gutters">
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block"
-									data-ng-click="add('kroMateDemi')">
-									Demi <span class="badge badge-secondary">{{bar.conso.kroMateDemi.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('kroMateDemi', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-beer btn-block"
-									data-ng-click="add('kroMatePinte')">
-									Pinte <span class="badge badge-secondary">{{bar.conso.kroMatePinte.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('kroMatePinte', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="card ttl-conso-vin">
-					<div class="row ttl no-gutters">
-						<span>Vin Blanc ou Rosé</span>
-					</div>
-					<div class="row no-gutters">
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-vin btn-block"
-									data-ng-click="add('vin12')">
-									12cl <span class="badge badge-secondary">{{bar.conso.vin12.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('vin12', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-vin btn-block"
-									data-ng-click="add('vin24')">
-									24cl <span class="badge badge-secondary">{{bar.conso.vin24.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('vin24', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-vin btn-block"
-									data-ng-click="add('vin48')">
-									48cl <span class="badge badge-secondary">{{bar.conso.vin48.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('vin48', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="btn-group btn-block">
-								<button type="button" class="btn btn-conso-vin btn-block"
-									data-ng-click="add('vinPichet')">
-									Pichet <span class="badge badge-secondary">{{bar.conso.vinPichet.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('vinPichet', option)">{{option}}</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row no-gutters">
-					<div class="col-8">
-						<div class="card ttl-conso-soft">
-							<div class="row ttl no-gutters">
-								<span>Cola / Limo / Diabolo / Sirop / Jus fruit</span>
-							</div>
-							<div class="row no-gutters">
-								<div class="col">
-									<div class="btn-group btn-block">
-										<button type="button" class="btn btn-conso-soft btn-block"
-											data-ng-click="add('softDemi')">
-											Demi <span class="badge badge-secondary">{{bar.conso.softDemi.nb}}</span>
-										</button>
-										<button type="button"
-											class="btn drp-conso-soft dropdown-toggle dropdown-toggle-split"
-											data-toggle="dropdown" aria-haspopup="true"
-											aria-expanded="false">
-											<span class="sr-only">Toggle Dropdown</span>
-										</button>
-										<div class="dropdown-menu" x-placement="bottom-start"
-											style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-											<a class="dropdown-item" href=""
-												data-ng-repeat="option in bar.nbOptions"
-												data-ng-click="set('softDemi', option)">{{option}}</a>
-										</div>
+		<div class="row fullh no-gutters">
+			<div class="col-sm-7 fullh">
+				<div class="blck-16">
+					<div class="card ttl-conso-beer">
+						<div class="ttl no-gutters">Kronembourg ou Panaché</div>
+						<div class="cntnt row no-gutters">
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-beer btn-block"
+										data-ng-click="add('kroDemi')">
+										Demi <span class="badge badge-secondary">{{bar.conso.kroDemi.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('kroDemi', option)">{{option}}</a>
 									</div>
 								</div>
-								<div class="col">
-									<div class="btn-group btn-block">
-										<button type="button" class="btn btn-conso-soft btn-block"
-											data-ng-click="add('softPinte')">
-											Pinte <span class="badge badge-secondary">{{bar.conso.softPinte.nb}}</span>
-										</button>
-										<button type="button"
-											class="btn drp-conso-soft dropdown-toggle dropdown-toggle-split"
-											data-toggle="dropdown" aria-haspopup="true"
-											aria-expanded="false">
-											<span class="sr-only">Toggle Dropdown</span>
-										</button>
-										<div class="dropdown-menu" x-placement="bottom-start"
-											style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-											<a class="dropdown-item" href=""
-												data-ng-repeat="option in bar.nbOptions"
-												data-ng-click="set('softPinte', option)">{{option}}</a>
-										</div>
+							</div>
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-beer btn-block"
+										data-ng-click="add('kroPinte')">
+										Pinte <span class="badge badge-secondary">{{bar.conso.kroPinte.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('kroPinte', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-beer btn-block"
+										data-ng-click="add('kroPichet')">
+										Pichet <span class="badge badge-secondary">{{bar.conso.kroPichet.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('kroPichet', option)">{{option}}</a>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-4">
-						<div class="btn-group btn-group-conso-eau btn-block">
-							<button type="button" class="btn btn-conso-eau btn-block"
-								data-ng-click="add('eau')">
-								Btl. d'eau <span class="badge badge-secondary">{{bar.conso.eau.nb}}</span>
-							</button>
-							<button type="button"
-								class="btn btn-conso-eau drp-conso-eau dropdown-toggle dropdown-toggle-split"
-								data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">
-								<span class="sr-only">Toggle Dropdown</span>
-							</button>
-							<div class="dropdown-menu" x-placement="bottom-start"
-								style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-								<a class="dropdown-item" href=""
-									data-ng-repeat="option in bar.nbOptions"
-									data-ng-click="set('eau', option)">{{option}}</a>
+				</div>
+				<div class="blck-16">
+					<div class="card ttl-conso-beer">
+						<div class="ttl no-gutters">Grimbergen</div>
+						<div class="row cntnt no-gutters">
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-beer btn-block"
+										data-ng-click="add('grimDemi')">
+										Demi <span class="badge badge-secondary">{{bar.conso.grimDemi.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('grimDemi', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-beer btn-block"
+										data-ng-click="add('grimPinte')">
+										Pinte <span class="badge badge-secondary">{{bar.conso.grimPinte.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('grimPinte', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-beer btn-block"
+										data-ng-click="add('grimPichet')">
+										Pichet <span class="badge badge-secondary">{{bar.conso.grimPichet.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('grimPichet', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="blck-16">
+					<div class="card ttl-conso-beer">
+						<div class="ttl no-gutters">Twist / Monaco / Pêche / Pelouse</div>
+						<div class="row cntnt no-gutters">
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-beer btn-block"
+										data-ng-click="add('kroSiropDemi')">
+										Demi <span class="badge badge-secondary">{{bar.conso.kroSiropDemi.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('kroSiropDemi', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-beer btn-block"
+										data-ng-click="add('kroSiropPinte')">
+										Pinte <span class="badge badge-secondary">{{bar.conso.kroSiropPinte.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('kroSiropPinte', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-beer btn-block"
+										data-ng-click="add('kroSiropPichet')">
+										Pichet <span class="badge badge-secondary">{{bar.conso.kroSiropPichet.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('kroSiropPichet', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="blck-16">
+					<div class="card ttl-conso-beer">
+						<div class="ttl no-gutters">Club Maté ou Kromaté</div>
+						<div class="row cntnt no-gutters">
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-beer btn-block"
+										data-ng-click="add('kroMateDemi')">
+										Demi <span class="badge badge-secondary">{{bar.conso.kroMateDemi.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('kroMateDemi', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-beer btn-block"
+										data-ng-click="add('kroMatePinte')">
+										Pinte <span class="badge badge-secondary">{{bar.conso.kroMatePinte.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('kroMatePinte', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="blck-16">
+					<div class="card ttl-conso-vin">
+						<div class="ttl no-gutters">Vin Blanc ou Rosé</div>
+						<div class="row cntnt no-gutters">
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-vin btn-block"
+										data-ng-click="add('vin12')">
+										12cl <span class="badge badge-secondary">{{bar.conso.vin12.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('vin12', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-vin btn-block"
+										data-ng-click="add('vin24')">
+										24cl <span class="badge badge-secondary">{{bar.conso.vin24.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('vin24', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-vin btn-block"
+										data-ng-click="add('vin48')">
+										48cl <span class="badge badge-secondary">{{bar.conso.vin48.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('vin48', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="btn-group btn-block">
+									<button type="button" class="btn btn-conso-vin btn-block"
+										data-ng-click="add('vinPichet')">
+										Pichet <span class="badge badge-secondary">{{bar.conso.vinPichet.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('vinPichet', option)">{{option}}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="blck-16">
+					<div class="row fullh no-gutters">
+						<div class="col-8 fullh">
+							<div class="card ttl-conso-soft">
+								<div class="ttl no-gutters">Cola / Limo / Diabolo / Sirop
+									/ Jus fruit</div>
+								<div class="row cntnt no-gutters">
+									<div class="col">
+										<div class="btn-group btn-block">
+											<button class="btn btn-conso-soft btn-block"
+												data-ng-click="add('softDemi')">
+												Demi <span class="badge badge-secondary">{{bar.conso.softDemi.nb}}</span>
+											</button>
+											<button
+												class="btn drp-conso-soft dropdown-toggle dropdown-toggle-split"
+												data-toggle="dropdown" aria-haspopup="true"
+												aria-expanded="false">
+												<span class="sr-only">Toggle Dropdown</span>
+											</button>
+											<div class="dropdown-menu" x-placement="bottom-start"
+												style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+												<a class="dropdown-item" href=""
+													data-ng-repeat="option in bar.nbOptions"
+													data-ng-click="set('softDemi', option)">{{option}}</a>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="btn-group btn-block">
+											<button class="btn btn-conso-soft btn-block"
+												data-ng-click="add('softPinte')">
+												Pinte <span class="badge badge-secondary">{{bar.conso.softPinte.nb}}</span>
+											</button>
+											<button
+												class="btn drp-conso-soft dropdown-toggle dropdown-toggle-split"
+												data-toggle="dropdown" aria-haspopup="true"
+												aria-expanded="false">
+												<span class="sr-only">Toggle Dropdown</span>
+											</button>
+											<div class="dropdown-menu" x-placement="bottom-start"
+												style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+												<a class="dropdown-item" href=""
+													data-ng-repeat="option in bar.nbOptions"
+													data-ng-click="set('softPinte', option)">{{option}}</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 fullh">
+							<div class="btn-group btn-group-conso-eau btn-block">
+								<button class="btn btn-conso-eau btn-block"
+									data-ng-click="add('eau')">
+									Btl. d'eau <span class="badge badge-secondary">{{bar.conso.eau.nb}}</span>
+								</button>
+								<button
+									class="btn btn-conso-eau drp-conso-eau dropdown-toggle dropdown-toggle-split"
+									data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">
+									<span class="sr-only">Toggle Dropdown</span>
+								</button>
+								<div class="dropdown-menu" x-placement="bottom-start"
+									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+									<a class="dropdown-item" href=""
+										data-ng-repeat="option in bar.nbOptions"
+										data-ng-click="set('eau', option)">{{option}}</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-5">
-
-				<div class="card ttl-consigne">
-					<div class="row no-gutters">
-						<div class="col-2 ttl">
-							<span>Consignes</span>
-						</div>
-						<div class="col-5">
-							<div class="btn-group btn-block">
-								<button type="button" data-ng-click="add('consigneGobelet')"
-									class="btn btn-consigne btn-block">
-									Gobelet <span class="badge badge-secondary">{{bar.conso.consigneGobelet.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-consigne dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('consigneGobelet', option)">{{option}}</a>
+			<div class="col-sm-5 fullh">
+				<div class="blck-20">
+					<div class="card ttl-consigne">
+						<div class="row fullh no-gutters">
+							<div class="col-2 ttl">Consignes</div>
+							<div class="col-5 fullh">
+								<div class="btn-group btn-block">
+									<button type="button" data-ng-click="add('consigneGobelet')"
+										class="btn btn-consigne btn-block">
+										Gobelet <span class="badge badge-secondary">{{bar.conso.consigneGobelet.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-consigne dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('consigneGobelet', option)">{{option}}</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-5">
-							<div class="btn-group btn-block">
-								<button type="button" data-ng-click="add('consignePichet')"
-									class="btn btn-consigne btn-block">
-									Pichet <span class="badge badge-secondary">{{bar.conso.consignePichet.nb}}</span>
-								</button>
-								<button type="button"
-									class="btn drp-consigne dropdown-toggle dropdown-toggle-split"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<span class="sr-only">Toggle Dropdown</span>
-								</button>
-								<div class="dropdown-menu" x-placement="bottom-start"
-									style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href=""
-										data-ng-repeat="option in bar.nbOptions"
-										data-ng-click="set('consignePichet', option)">{{option}}</a>
+							<div class="col-5 fullh">
+								<div class="btn-group btn-block">
+									<button type="button" data-ng-click="add('consignePichet')"
+										class="btn btn-consigne btn-block">
+										Pichet <span class="badge badge-secondary">{{bar.conso.consignePichet.nb}}</span>
+									</button>
+									<button type="button"
+										class="btn drp-consigne dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu" x-placement="bottom-start"
+										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+										<a class="dropdown-item" href=""
+											data-ng-repeat="option in bar.nbOptions"
+											data-ng-click="set('consignePichet', option)">{{option}}</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row no-gutters">
-
-					<div class="col-9">
-						<div class="input-group">
-							<span class="input-group-addon montant ttl-montant montant-client" id="basic-addon1">Montant
-								commande</span> <input class="form-control form-control-lg montant val-montant montant-client"
-								data-ng-model="bar.montant" data-ng-init="bar.montant = 0"
-								type="text" readonly>
+				<div class="blck-20">
+					<div class="row fullh no-gutters">
+						<div class="fullh col-9">
+							<div class="blck-33 box-montant">
+								<div class="ttl-montant montant-client">Montant commande :
+									{{bar.montant}}</div>
+							</div>
+							<div class="blck-33 box-montant">
+								<div class="ttl-montant rendu-client">A rendre au client :
+									{{bar.monnaieRendu}}</div>
+							</div>
+							<div class="blck-33 box-montant">
+								<div class="ttl-montant btn-client">Monnaie client :
+									{{bar.monnaieDonnee}}</div>
+							</div>
 						</div>
-						<div class="input-group">
-							<span class="input-group-addon montant ttl-montant" id="basic-addon1">A rendre
-								au client</span> <input class="form-control form-control-lg montant val-montant"
-								data-ng-model="bar.monnaieRendu"
-								data-ng-init="bar.monnaieRendu = 0" type="text" readonly>
+						<div class="fullh col-3">
+							<button type="button" class="btn btn-cmd btn-cmd-new btn-block"
+								data-ng-click="newCmd()">Nouv. Commande</button>
 						</div>
-						<div class="input-group">
-							<span class="input-group-addon btn-client montant ttl-montant" id="basic-addon1">Monnaie
-								client</span> <input class="form-control form-control-lg btn-client montant val-montant"
-								data-ng-model="bar.monnaieDonnee"
-								data-ng-init="bar.monnaieDonnee = 0" type="text" readonly>
-						</div>
-					</div>
-					<div class="col-3">
-						<button type="button" class="btn btn-cmd btn-cmd-new btn-block"
-							data-ng-click="newCmd()" style="height: 100%;">Nouv. Commande</button>
 					</div>
 				</div>
-				<div>
-					<div class="row no-gutters">
+				<div class="blck-60">
+					<div class="blck-25 row no-gutters">
 						<div class="col">
 							<button type="button" data-ng-click="numberButtonClicked(7)"
 								class="btn btn-client btn-block">7</button>
@@ -538,7 +536,7 @@
 								class="btn btn-client btn-block">9</button>
 						</div>
 					</div>
-					<div class="row no-gutters">
+					<div class="blck-25 row no-gutters">
 						<div class="col">
 							<button type="button" data-ng-click="numberButtonClicked(4)"
 								class="btn btn-client btn-block">4</button>
@@ -552,7 +550,7 @@
 								class="btn btn-client btn-block">6</button>
 						</div>
 					</div>
-					<div class="row no-gutters">
+					<div class="blck-25 row no-gutters">
 						<div class="col">
 							<button type="button" data-ng-click="numberButtonClicked(1)"
 								class="btn btn-client btn-block">1</button>
@@ -566,29 +564,29 @@
 								class="btn btn-client btn-block">3</button>
 						</div>
 					</div>
-					<div class="row no-gutters">
-						<div class="col-4">
-							<div>
-								<button type="button" data-ng-click="numberButtonClicked(0)"
-									class="btn btn-client btn-block">0</button>
-							</div>
+					<div class="blck-25 row no-gutters">
+						<div class="col">
+							<button type="button" data-ng-click="numberButtonClicked(0)"
+								class="btn btn-client btn-block">0</button>
 						</div>
-						<div class="col-4">
-							<div>
-								<button type="button" data-ng-click="numberButtonClicked('.')"
-									class="btn btn-client btn-block">.</button>
-							</div>
+						<div class="col">
+							<button type="button" data-ng-click="numberButtonClicked('.')"
+								class="btn btn-client btn-block">.</button>
 						</div>
-						<div class="col-2">
-							<div>
-								<button type="button" class="btn btn-client btn-block"
-									data-ng-click="clear()">⌫</button>
-							</div>
-						</div>
-						<div class="col-2">
-							<div>
-								<button type="button" class="btn btn-client btn-block"
-									data-ng-click="clearAll()">⌧</button>
+						<div class="col">
+							<div class="row fullh no-gutters">
+								<div class="col">
+									<button type="button" class="btn btn-client-clr btn-block"
+										data-ng-click="clear()">
+										<i class="fa fa-step-backward fa-lg"></i>
+									</button>
+								</div>
+								<div class="col">
+									<button type="button" class="btn btn-client-clr btn-block"
+										data-ng-click="clearAll()">
+										<i class="fa fa-eraser fa-lg"></i>
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
