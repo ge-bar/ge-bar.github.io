@@ -71,9 +71,7 @@ html, body {
 	padding: 0rem 0rem;
 }
 
-button {
-	outline: none !important;
-}
+*:focus {outline:none !important}
 
 .btn:active {
 	border: none !important;
