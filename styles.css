@@ -32,8 +32,8 @@ html, body {
 	height: 33.333%;
 }
 
-.blck-60 {
-	height: 60%;
+.blck-55 {
+	height: 55%;
 }
 
 .card {
@@ -59,16 +59,16 @@ html, body {
 
 .ttl {
 	font-size: .8rem;
-	height: 20%;
+	height: 25%;
 	padding-left: .5rem !important;
 }
 
 .cntnt {
-	height: 80%
+	height: 75%
 }
 
 .btn {
-	padding: .5rem 0rem;
+	padding: 0rem 0rem;
 }
 
 .btn:active {
