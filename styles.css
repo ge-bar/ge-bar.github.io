@@ -67,6 +67,10 @@ html, body {
 	height: 80%
 }
 
+.btn {
+	padding: .5rem 0rem;
+}
+
 .btn:active {
 	border: none !important;
 }
