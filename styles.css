@@ -72,7 +72,7 @@ html, body {
 }
 
 button {
-	outline: 0;
+	outline: none !important;
 }
 
 .btn:active {
