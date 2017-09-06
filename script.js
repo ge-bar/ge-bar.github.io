@@ -169,6 +169,8 @@ barModel = {
 			} else {
 				this.monnaieRendu = 0;
 			}
+		} else {
+			this.monnaieRendu = 0;
 		}
 	},
 	reset : function() {
@@ -212,7 +214,7 @@ app.controller('geBarController', function($scope) {
 		barModel.calculMontant();
 		barModel.calculRendu();
 	}
-	
+
 	$scope.newCmd = function() {
 		barModel.reset();
 	}
