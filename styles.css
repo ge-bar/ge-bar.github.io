@@ -71,6 +71,10 @@ html, body {
 	padding: 0rem 0rem;
 }
 
+button:focus {
+	outline: none;
+}
+
 .btn:active {
 	border: none !important;
 }
