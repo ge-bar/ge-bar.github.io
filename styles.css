@@ -171,6 +171,15 @@ html, body {
 	background-color: #ff8566;
 }
 
+.basket {
+	background-color: red;
+}
+
+.deposit {
+	background-color: lime;
+	color: black;
+}
+
 .montant-client {
 	background-color: #84e184;
 }
@@ -180,6 +189,10 @@ html, body {
 	width: 100%;
 	border-radius: .25rem;
 	padding: .1rem;
+}
+
+.lbl-montant {
+	font-weight: bold;
 }
 
 .ttl-montant {
