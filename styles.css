@@ -17,7 +17,7 @@ html, body {
 }
 
 .blck-16 {
-	height: 16.666%;
+	height: calc(100%/7);
 }
 
 .blck-20 {
@@ -58,17 +58,18 @@ html, body {
 }
 
 .ttl {
-	font-size: .8rem;
-	height: 25%;
+	font-size: clamp(.8rem, 2.2vw, 1.2rem);
+	height: 20%;
 	padding-left: .5rem !important;
 }
 
 .cntnt {
-	height: 75%
+	height: 80%
 }
 
-.btn {
+.btn, .info-montant {
 	padding: 0rem 0rem;
+	font-size: clamp(1rem, 4vw, 1.5rem);
 }
 
 *:focus {outline:none !important}
@@ -182,15 +183,9 @@ html, body {
 	color: black;
 }
 
-.montant-client {
-	background-color: #84e184;
-}
-
-.box-montant {
+.info-montant {
 	display: table;
 	width: 100%;
-	border-radius: .25rem;
-	padding: .1rem;
 }
 
 .lbl-montant {
@@ -201,8 +196,22 @@ html, body {
 	display: table-cell;
 	vertical-align: middle;
 	padding-left: .5rem;
+	width: 100%;
+}
+
+.info-details {
+	font-family: monospace;
+	display: table-cell;
+	vertical-align: top;
+	white-space: pre-line;
 	height: 100%;
-	border-radius: .25rem;
+	width: 100%;
+	padding: 1rem;
+}
+
+.info-details > hr {
+	border: .08rem solid;
+	margin: 0;
 }
 
 .rendu-client {
@@ -218,4 +227,14 @@ html, body {
 	background-color: white;
 	border-color: #ffb366;
 	color: #ffb366;
+}
+
+.badge {
+	background-color: transparent;
+	color: black;
+}
+
+.positive {
+	background-color: darkorchid;
+	color: lime;
 }

@@ -49,13 +49,14 @@
 			<div class="col-sm-7 fullh">
 				<div class="blck-16">
 					<div class="card ttl-conso-beer">
-						<div class="ttl no-gutters">Kronembourg ou Panaché</div>
+						<div class="ttl no-gutters">Blonde</div>
 						<div class="cntnt row no-gutters">
 							<div class="col">
 								<div class="btn-group btn-block">
 									<button type="button" class="btn btn-conso-beer btn-block"
 										data-ng-click="add('kroDemi')">
 										Demi <span class="badge badge-secondary"
+											ng-class="{'positive' : bar.conso.kroDemi.nb > 0}"
 											data-ng-class="{basket: bar.conso.kroDemi.nb > 0}">{{bar.conso.kroDemi.nb}}</span>
 									</button>
 									<button type="button"
@@ -77,6 +78,7 @@
 									<button type="button" class="btn btn-conso-beer btn-block"
 										data-ng-click="add('kroPinte')">
 										Pinte <span class="badge badge-secondary"
+											ng-class="{'positive' : bar.conso.kroPinte.nb > 0}"
 											data-ng-class="{basket: bar.conso.kroPinte.nb > 0}">{{bar.conso.kroPinte.nb}}</span>
 									</button>
 									<button type="button"
@@ -96,9 +98,10 @@
 							<div class="col">
 								<div class="btn-group btn-block">
 									<button type="button" class="btn btn-conso-beer btn-block"
-										data-ng-click="add('kroPichet')">
-										Pichet <span class="badge badge-secondary"
-											data-ng-class="{basket: bar.conso.kroPichet.nb > 0}">{{bar.conso.kroPichet.nb}}</span>
+										data-ng-click="add('kroCarafe')">
+										Carafe <span class="badge badge-secondary"
+											ng-class="{'positive' : bar.conso.kroCarafe.nb > 0}"
+											data-ng-class="{basket: bar.conso.kroCarafe.nb > 0}">{{bar.conso.kroCarafe.nb}}</span>
 									</button>
 									<button type="button"
 										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -110,7 +113,7 @@
 										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
 										<a class="dropdown-item" href=""
 											data-ng-repeat="option in bar.nbOptions"
-											data-ng-click="set('kroPichet', option)">{{option}}</a>
+											data-ng-click="set('kroCarafe', option)">{{option}}</a>
 									</div>
 								</div>
 							</div>
@@ -119,14 +122,15 @@
 				</div>
 				<div class="blck-16">
 					<div class="card ttl-conso-beer">
-						<div class="ttl no-gutters">Grimbergen</div>
+						<div class="ttl no-gutters">Blanche ou Ambré</div>
 						<div class="row cntnt no-gutters">
 							<div class="col">
 								<div class="btn-group btn-block">
 									<button type="button" class="btn btn-conso-beer btn-block"
-										data-ng-click="add('grimDemi')">
+										data-ng-click="add('abnDemi')">
 										Demi <span class="badge badge-secondary"
-											data-ng-class="{basket: bar.conso.grimDemi.nb > 0}">{{bar.conso.grimDemi.nb}}</span>
+											ng-class="{'positive' : bar.conso.abnDemi.nb > 0}"
+											data-ng-class="{basket: bar.conso.abnDemi.nb > 0}">{{bar.conso.abnDemi.nb}}</span>
 									</button>
 									<button type="button"
 										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -138,16 +142,17 @@
 										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
 										<a class="dropdown-item" href=""
 											data-ng-repeat="option in bar.nbOptions"
-											data-ng-click="set('grimDemi', option)">{{option}}</a>
+											data-ng-click="set('abnDemi', option)">{{option}}</a>
 									</div>
 								</div>
 							</div>
 							<div class="col">
 								<div class="btn-group btn-block">
 									<button type="button" class="btn btn-conso-beer btn-block"
-										data-ng-click="add('grimPinte')">
+										data-ng-click="add('abnPinte')">
 										Pinte <span class="badge badge-secondary"
-											data-ng-class="{basket: bar.conso.grimPinte.nb > 0}">{{bar.conso.grimPinte.nb}}</span>
+											ng-class="{'positive' : bar.conso.abnPinte.nb > 0}"
+											data-ng-class="{basket: bar.conso.abnPinte.nb > 0}">{{bar.conso.abnPinte.nb}}</span>
 									</button>
 									<button type="button"
 										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -159,16 +164,17 @@
 										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
 										<a class="dropdown-item" href=""
 											data-ng-repeat="option in bar.nbOptions"
-											data-ng-click="set('grimPinte', option)">{{option}}</a>
+											data-ng-click="set('abnPinte', option)">{{option}}</a>
 									</div>
 								</div>
 							</div>
 							<div class="col">
 								<div class="btn-group btn-block">
 									<button type="button" class="btn btn-conso-beer btn-block"
-										data-ng-click="add('grimPichet')">
-										Pichet <span class="badge badge-secondary"
-											data-ng-class="{basket: bar.conso.grimPichet.nb > 0}">{{bar.conso.grimPichet.nb}}</span>
+										data-ng-click="add('abnCarafe')">
+										Carafe <span class="badge badge-secondary"
+											ng-class="{'positive' : bar.conso.abnCarafe.nb > 0}"
+											data-ng-class="{basket: bar.conso.abnCarafe.nb > 0}">{{bar.conso.abnCarafe.nb}}</span>
 									</button>
 									<button type="button"
 										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -180,7 +186,7 @@
 										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
 										<a class="dropdown-item" href=""
 											data-ng-repeat="option in bar.nbOptions"
-											data-ng-click="set('grimPichet', option)">{{option}}</a>
+											data-ng-click="set('abnCarafe', option)">{{option}}</a>
 									</div>
 								</div>
 							</div>
@@ -189,13 +195,14 @@
 				</div>
 				<div class="blck-16">
 					<div class="card ttl-conso-beer">
-						<div class="ttl no-gutters">Twist / Monaco / Pêche / Pelouse</div>
+						<div class="ttl no-gutters">Panaché / Twist / Monaco / Pêche</div>
 						<div class="row cntnt no-gutters">
 							<div class="col">
 								<div class="btn-group btn-block">
 									<button type="button" class="btn btn-conso-beer btn-block"
 										data-ng-click="add('kroSiropDemi')">
 										Demi <span class="badge badge-secondary"
+											ng-class="{'positive' : bar.conso.kroSiropDemi.nb > 0}"
 											data-ng-class="{basket: bar.conso.kroSiropDemi.nb > 0}">{{bar.conso.kroSiropDemi.nb}}</span>
 									</button>
 									<button type="button"
@@ -217,6 +224,7 @@
 									<button type="button" class="btn btn-conso-beer btn-block"
 										data-ng-click="add('kroSiropPinte')">
 										Pinte <span class="badge badge-secondary"
+											ng-class="{'positive' : bar.conso.kroSiropPinte.nb > 0}"
 											data-ng-class="{basket: bar.conso.kroSiropPinte.nb > 0}">{{bar.conso.kroSiropPinte.nb}}</span>
 									</button>
 									<button type="button"
@@ -236,9 +244,10 @@
 							<div class="col">
 								<div class="btn-group btn-block">
 									<button type="button" class="btn btn-conso-beer btn-block"
-										data-ng-click="add('kroSiropPichet')">
-										Pichet <span class="badge badge-secondary"
-											data-ng-class="{basket: bar.conso.kroSiropPichet.nb > 0}">{{bar.conso.kroSiropPichet.nb}}</span>
+										data-ng-click="add('kroSiropCarafe')">
+										Carafe <span class="badge badge-secondary"
+											ng-class="{'positive' : bar.conso.kroSiropCarafe.nb > 0}"
+											data-ng-class="{basket: bar.conso.kroSiropCarafe.nb > 0}">{{bar.conso.kroSiropCarafe.nb}}</span>
 									</button>
 									<button type="button"
 										class="btn drp-conso-beer dropdown-toggle dropdown-toggle-split"
@@ -250,14 +259,14 @@
 										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
 										<a class="dropdown-item" href=""
 											data-ng-repeat="option in bar.nbOptions"
-											data-ng-click="set('kroSiropPichet', option)">{{option}}</a>
+											data-ng-click="set('kroSiropCarafe', option)">{{option}}</a>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="blck-16">
+				<!--div class="blck-16">
 					<div class="card ttl-conso-beer">
 						<div class="ttl no-gutters">Club Maté ou Kromaté</div>
 						<div class="row cntnt no-gutters">
@@ -305,7 +314,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div-->
 				<div class="blck-16">
 					<div class="card ttl-conso-vin">
 						<div class="ttl no-gutters">Vin Blanc ou Rosé</div>
@@ -315,6 +324,7 @@
 									<button type="button" class="btn btn-conso-vin btn-block"
 										data-ng-click="add('vin12')">
 										12cl <span class="badge badge-secondary"
+										ng-class="{'positive' : bar.conso.vin12.nb > 0}"
 											data-ng-class="{basket: bar.conso.vin12.nb > 0}">{{bar.conso.vin12.nb}}</span>
 									</button>
 									<button type="button"
@@ -336,6 +346,7 @@
 									<button type="button" class="btn btn-conso-vin btn-block"
 										data-ng-click="add('vin24')">
 										24cl <span class="badge badge-secondary"
+											ng-class="{'positive' : bar.conso.vin24.nb > 0}"
 											data-ng-class="{basket: bar.conso.vin24.nb > 0}">{{bar.conso.vin24.nb}}</span>
 									</button>
 									<button type="button"
@@ -357,6 +368,7 @@
 									<button type="button" class="btn btn-conso-vin btn-block"
 										data-ng-click="add('vin48')">
 										48cl <span class="badge badge-secondary"
+											ng-class="{'positive' : bar.conso.vin48.nb > 0}"
 											data-ng-class="{basket: bar.conso.vin48.nb > 0}">{{bar.conso.vin48.nb}}</span>
 									</button>
 									<button type="button"
@@ -376,9 +388,10 @@
 							<div class="col">
 								<div class="btn-group btn-block">
 									<button type="button" class="btn btn-conso-vin btn-block"
-										data-ng-click="add('vinPichet')">
-										Pichet <span class="badge badge-secondary"
-											data-ng-class="{basket: bar.conso.vinPichet.nb > 0}">{{bar.conso.vinPichet.nb}}</span>
+										data-ng-click="add('vinCarafe')">
+										Carafe <span class="badge badge-secondary"
+											ng-class="{'positive' : bar.conso.vinCarafe.nb > 0}"
+											data-ng-class="{basket: bar.conso.vinCarafe.nb > 0}">{{bar.conso.vinCarafe.nb}}</span>
 									</button>
 									<button type="button"
 										class="btn drp-conso-vin dropdown-toggle dropdown-toggle-split"
@@ -390,7 +403,7 @@
 										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
 										<a class="dropdown-item" href=""
 											data-ng-repeat="option in bar.nbOptions"
-											data-ng-click="set('vinPichet', option)">{{option}}</a>
+											data-ng-click="set('vinCarafe', option)">{{option}}</a>
 									</div>
 								</div>
 							</div>
@@ -409,6 +422,7 @@
 											<button class="btn btn-conso-soft btn-block"
 												data-ng-click="add('softDemi')">
 												Demi <span class="badge badge-secondary"
+													ng-class="{'positive' : bar.conso.softDemi.nb > 0}"
 													data-ng-class="{basket: bar.conso.softDemi.nb > 0}">{{bar.conso.softDemi.nb}}</span>
 											</button>
 											<button
@@ -430,6 +444,7 @@
 											<button class="btn btn-conso-soft btn-block"
 												data-ng-click="add('softPinte')">
 												Pinte <span class="badge badge-secondary"
+													ng-class="{'positive' : bar.conso.softPinte.nb > 0}"
 													data-ng-class="{basket: bar.conso.softPinte.nb > 0}">{{bar.conso.softPinte.nb}}</span>
 											</button>
 											<button
@@ -454,6 +469,7 @@
 								<button class="btn btn-conso-eau btn-block"
 									data-ng-click="add('eau')">
 									Btl. d'eau <span class="badge badge-secondary"
+										ng-class="{'positive' : bar.conso.eau.nb > 0}"
 										data-ng-class="{basket: bar.conso.eau.nb > 0}">{{bar.conso.eau.nb}}</span>
 								</button>
 								<button
@@ -472,17 +488,16 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-sm-5 fullh">
-				<div class="blck-20">
+				<div class="blck-16">
 					<div class="card ttl-consigne">
 						<div class="row fullh no-gutters">
-							<div class="col-2 ttl">Consignes</div>
-							<div class="col-5 fullh">
+							<!--div class="col-2 ttl">Consignes</div-->
+							<div class="col-6 fullh">
 								<div class="btn-group btn-block">
 									<button type="button" data-ng-click="add('consigneGobelet')"
 										class="btn btn-consigne btn-block">
 										Gobelet <span class="badge badge-secondary"
+											ng-class="{'positive' : bar.conso.consigneGobelet.nb > 0}"
 											data-ng-class="{deposit: bar.conso.consigneGobelet.nb > 0}">{{bar.conso.consigneGobelet.nb}}</span>
 									</button>
 									<button type="button"
@@ -499,12 +514,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-5 fullh">
+							<div class="col-6 fullh">
 								<div class="btn-group btn-block">
-									<button type="button" data-ng-click="add('consignePichet')"
+									<button type="button" data-ng-click="add('consigneCarafe')"
 										class="btn btn-consigne btn-block">
-										Pichet <span class="badge badge-secondary"
-											data-ng-class="{deposit: bar.conso.consignePichet.nb > 0}">{{bar.conso.consignePichet.nb}}</span>
+										Carafe <span class="badge badge-secondary"
+											ng-class="{'positive' : bar.conso.consigneCarafe.nb > 0}"
+											data-ng-class="{deposit: bar.conso.consigneCarafe.nb > 0}">{{bar.conso.consigneCarafe.nb}}</span>
 									</button>
 									<button type="button"
 										class="btn drp-consigne dropdown-toggle dropdown-toggle-split"
@@ -516,21 +532,22 @@
 										style="position: absolute; transform: translate3d(80px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
 										<a class="dropdown-item" href=""
 											data-ng-repeat="option in bar.nbOptions"
-											data-ng-click="set('consignePichet', option)">{{option}}</a>
+											data-ng-click="set('consigneCarafe', option)">{{option}}</a>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="blck-25">
+				<div class="blck-16">
 					<div class="row fullh no-gutters">
-						<div class="fullh col-9">
-							<div class="blck-33 box-montant">
-								<div class="ttl-montant montant-client">
-									Montant commande : <span class="lbl-montant">{{bar.montant}}</span>
+						<div class="fullh col-7">
+							<div class="fullh info-montant">
+								<div class="fullh ttl-montant">
+									Montant : <span class="lbl-montant">{{bar.montant}}</span> €
 								</div>
 							</div>
+							<!--
 							<div class="blck-33 box-montant">
 								<div class="ttl-montant rendu-client">
 									A rendre au client : <span class="lbl-montant">{{bar.monnaieRendu}}</span>
@@ -540,15 +557,22 @@
 								<div class="ttl-montant btn-client">
 									Monnaie client : <span class="lbl-montant">{{bar.monnaieDonnee}}</span>
 								</div>
-							</div>
+							</div>-->
 						</div>
-						<div class="fullh col-3">
+						<div class="fullh col-5">
 							<button type="button" class="btn btn-cmd btn-cmd-new btn-block"
-								data-ng-click="newCmd()">Nouv. Commande</button>
+								data-ng-click="newCmd()">Reset<br><br>Nouvelle Commande</button>
 						</div>
 					</div>
 				</div>
-				<div class="blck-55">
+			</div>
+			<div class="col-sm-5">
+				<div class="blck-25">
+					<div class="row fullh no-gutters" data-ng-if="bar.recap != ''">
+						<div class="info-details"><span>{{bar.recap}}</span></div>
+					</div>
+				</div>
+				<!--div class="blck-55">
 					<div class="blck-25 row no-gutters">
 						<div class="col">
 							<button type="button" data-ng-click="numberButtonClicked(7)"
@@ -617,7 +641,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div-->
 			</div>
 		</div>
 	</div>

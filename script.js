@@ -32,87 +32,106 @@ barModel = {
 	conso : {
 		kroDemi : {
 			prix : 3,
-			nb : 0
+			nb : 0,
+			name: "Demi Blonde"
 		},
 		kroPinte : {
-			prix : 5,
-			nb : 0
+			prix : 5.5,
+			nb : 0,
+			name: "Pinte Blonde"
 		},
-		kroPichet : {
-			prix : 14,
-			nb : 0
+		kroCarafe : {
+			prix : 16,
+			nb : 0,
+			name: "Carafe Blonde"
 		},
-		grimDemi : {
+		abnDemi : {
 			prix : 4,
-			nb : 0
+			nb : 0,
+			name: "Demi Blanche / Ambré"
 		},
-		grimPinte : {
-			prix : 7,
-			nb : 0
+		abnPinte : {
+			prix : 7.5,
+			nb : 0,
+			name: "Pinte Blanche / Ambré"
 		},
-		grimPichet : {
-			prix : 20,
-			nb : 0
+		abnCarafe : {
+			prix : 22,
+			nb : 0,
+			name: "Carafe Blanche / Ambré"
 		},
 		kroSiropDemi : {
 			prix : 3.5,
-			nb : 0
+			nb : 0,
+			name: "Demi Panaché / Twist / Monaco / Pêche"
 		},
 		kroSiropPinte : {
-			prix : 6,
-			nb : 0
+			prix : 6.5,
+			nb : 0,
+			name: "Pinte Panaché / Twist / Monaco / Pêche"
 		},
-		kroSiropPichet : {
-			prix : 17,
-			nb : 0
+		kroSiropCarafe : {
+			prix : 19,
+			nb : 0,
+			name: "Carafe Panaché / Twist / Monaco / Pêche"
 		},
-		kroMateDemi : {
+		/*kroMateDemi : {
 			prix : 3,
 			nb : 0
 		},
 		kroMatePinte : {
 			prix : 5,
 			nb : 0
-		},
+		},*/
 		vin12 : {
-			prix : 2.5,
-			nb : 0
+			prix : 3,
+			nb : 0,
+			name: "12cl vin"
 		},
 		vin24 : {
-			prix : 4.5,
-			nb : 0
+			prix : 5.5,
+			nb : 0,
+			name: "24cl vin"
 		},
 		vin48 : {
-			prix : 8,
-			nb : 0
+			prix : 10.5,
+			nb : 0,
+			name: "48cl vin"
 		},
-		vinPichet : {
-			prix : 24,
-			nb : 0
+		vinCarafe : {
+			prix : 31,
+			nb : 0,
+			name: "Carafe vin"
 		},
 		softDemi : {
 			prix : 1.5,
-			nb : 0
+			nb : 0,
+			name: "Demi Soft"
 		},
 		softPinte : {
 			prix : 2.5,
-			nb : 0
+			nb : 0,
+			name: "Pinte Soft"
 		},
 		eau : {
 			prix : 1,
-			nb : 0
+			nb : 0,
+			name: "Bouteille d'eau"
 		},
 		consigneGobelet : {
-			prix : 1,
-			nb : 0
+			prix : .5,
+			nb : 0,
+			name: "Gobelet"
 		},
-		consignePichet : {
-			prix : 2,
-			nb : 0
+		consigneCarafe : {
+			prix : 1,
+			nb : 0,
+			name: "Carafe"
 		}
 	},
 	nbOptions : [ 0, 1, 2, 3, 4, 5, 6 ],
 	montant : 0,
+	recap: "",
 	monnaieRendu : 0,
 	monnaieDonnee : 0,
 	addNumber : function(number) {
@@ -156,10 +175,16 @@ barModel = {
 	},
 	calculMontant : function() {
 		var somme = 0;
+		var desc = "";
 		for ( var conso in this.conso) {
-			somme += this.conso[conso].prix * this.conso[conso].nb;
+			var soustot = this.conso[conso].prix * this.conso[conso].nb
+			somme += soustot;
+			if (this.conso[conso].nb > 0) {
+				desc = desc.concat(this.conso[conso].nb, ' ', this.conso[conso].name, '\t', soustot, ' €\n');
+			}
 		}
 		this.montant = somme;
+		this.recap = desc;
 	},
 	calculRendu : function() {
 		if (this.monnaieDonnee > 0 && this.montant > 0) {
@@ -180,6 +205,7 @@ barModel = {
 		this.montant = 0;
 		this.monnaieRendu = 0;
 		this.monnaieDonnee = 0;
+		this.recap = "";
 	}
 };
 
