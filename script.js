@@ -117,7 +117,7 @@ barModel = {
 			prix : 3,
 			nb : 0,
 			name: "12cl vin",
-			code: "VIN25"
+			code: "VIN12"
 		},
 		vin24 : {
 			prix : 5.5,
