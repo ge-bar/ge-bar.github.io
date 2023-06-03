@@ -1,3 +1,6 @@
+var vendorName;
+var vendorId;
+
 $(function() {
 	if (isIos() && isRunningStandalone()) {
 		/*
@@ -8,7 +11,25 @@ $(function() {
 		 */
 		FastClick.attach(document.body);
 	}
+
+	vendorName = localStorage.getItem('vendor_name');
+	//console.log(vendorName);
+	if (vendorName == null) {
+		var name = randomElement(prenoms);
+		localStorage.setItem('vendor_name', name);
+	}
+	vendorId = localStorage.getItem('vendor_id');
+	//console.log(vendorId);
+	if (vendorId == null) {
+		let uuid = self.crypto.randomUUID();
+		localStorage.setItem('vendor_id', uuid);
+	}
 });
+
+var randomElement = function(array) {
+	return array[Math.floor(Math.random() * array.length)];
+  };
+  
 
 isIos = function() {
 	// Reference:
@@ -33,47 +54,56 @@ barModel = {
 		kroDemi : {
 			prix : 3,
 			nb : 0,
-			name: "Demi Blonde"
+			name: "Demi Blonde",
+			code: "KRO25"
 		},
 		kroPinte : {
 			prix : 5.5,
 			nb : 0,
-			name: "Pinte Blonde"
+			name: "Pinte Blonde",
+			code: "KRO50"
 		},
 		kroCarafe : {
 			prix : 16,
 			nb : 0,
-			name: "Carafe Blonde"
+			name: "Carafe Blonde",
+			code: "KRO150"
 		},
 		abnDemi : {
 			prix : 4,
 			nb : 0,
-			name: "Demi Blanche / Ambré"
+			name: "Demi Blanche / Ambré",
+			code: "ABN25"
 		},
 		abnPinte : {
 			prix : 7.5,
 			nb : 0,
-			name: "Pinte Blanche / Ambré"
+			name: "Pinte Blanche / Ambré",
+			code: "ABN50"
 		},
 		abnCarafe : {
 			prix : 22,
 			nb : 0,
-			name: "Carafe Blanche / Ambré"
+			name: "Carafe Blanche / Ambré",
+			code: "ABN150"
 		},
 		kroSiropDemi : {
 			prix : 3.5,
 			nb : 0,
-			name: "Demi Panaché / Twist / Monaco / Pêche"
+			name: "Demi Panaché / Twist / Monaco / Pêche",
+			code: "PAN25"
 		},
 		kroSiropPinte : {
 			prix : 6.5,
 			nb : 0,
-			name: "Pinte Panaché / Twist / Monaco / Pêche"
+			name: "Pinte Panaché / Twist / Monaco / Pêche",
+			code: "PAN50"
 		},
 		kroSiropCarafe : {
 			prix : 19,
 			nb : 0,
-			name: "Carafe Panaché / Twist / Monaco / Pêche"
+			name: "Carafe Panaché / Twist / Monaco / Pêche",
+			code: "PAN150"
 		},
 		/*kroMateDemi : {
 			prix : 3,
@@ -86,47 +116,56 @@ barModel = {
 		vin12 : {
 			prix : 3,
 			nb : 0,
-			name: "12cl vin"
+			name: "12cl vin",
+			code: "VIN25"
 		},
 		vin24 : {
 			prix : 5.5,
 			nb : 0,
-			name: "24cl vin"
+			name: "24cl vin",
+			code: "VIN24"
 		},
 		vin48 : {
 			prix : 10.5,
 			nb : 0,
-			name: "48cl vin"
+			name: "48cl vin",
+			code: "VIN48"
 		},
 		vinCarafe : {
 			prix : 31,
 			nb : 0,
-			name: "Carafe vin"
+			name: "Carafe vin",
+			code: "VIN150"
 		},
 		softDemi : {
 			prix : 1.5,
 			nb : 0,
-			name: "Demi Soft"
+			name: "Demi Soft",
+			code: "SOFT25"
 		},
 		softPinte : {
 			prix : 2.5,
 			nb : 0,
-			name: "Pinte Soft"
+			name: "Pinte Soft",
+			code: "SOFT50"
 		},
 		eau : {
 			prix : 1,
 			nb : 0,
-			name: "Bouteille d'eau"
+			name: "Bouteille d'eau",
+			code: "EAU"
 		},
 		consigneGobelet : {
 			prix : .5,
 			nb : 0,
-			name: "Gobelet"
+			name: "Gobelet",
+			code: "GOB"
 		},
 		consigneCarafe : {
 			prix : 1,
 			nb : 0,
-			name: "Carafe"
+			name: "Carafe",
+			code: "CARAF"
 		}
 	},
 	nbOptions : [ 0, 1, 2, 3, 4, 5, 6 ],
@@ -199,6 +238,7 @@ barModel = {
 		}
 	},
 	reset : function() {
+		envoiCommande(toGSheetDto());
 		for ( var conso in this.conso) {
 			this.conso[conso].nb = 0;
 		}
@@ -208,6 +248,18 @@ barModel = {
 		this.recap = "";
 	}
 };
+
+function toGSheetDto() {
+	var dto = {};
+	Object.entries(barModel.conso).forEach(([key, value]) => {
+		//console.log(`${key} ${value.nb}`);
+		dto[value.code] = value.nb;
+	});
+	dto['Nom'] = vendorName;
+	dto['Id'] = vendorId;
+	dto['Total'] = barModel.montant;
+	return dto;
+}
 
 var app = angular.module('geBar', []);
 app.controller('geBarController', function($scope) {
