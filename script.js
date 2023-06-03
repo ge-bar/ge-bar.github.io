@@ -15,14 +15,14 @@ $(function() {
 	vendorName = localStorage.getItem('vendor_name');
 	//console.log(vendorName);
 	if (vendorName == null) {
-		var name = randomElement(prenoms);
-		localStorage.setItem('vendor_name', name);
+		vendorName = randomElement(prenoms);
+		localStorage.setItem('vendor_name', vendorName);
 	}
 	vendorId = localStorage.getItem('vendor_id');
 	//console.log(vendorId);
 	if (vendorId == null) {
-		let uuid = self.crypto.randomUUID();
-		localStorage.setItem('vendor_id', uuid);
+		vendorId = self.crypto.randomUUID();
+		localStorage.setItem('vendor_id', vendorId);
 	}
 });
 
